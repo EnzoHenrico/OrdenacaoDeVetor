@@ -1,7 +1,7 @@
-﻿int[] numbers = new int[5], sorted = new int[5];
-int temp = 0, size = 5;
+﻿int temp = 0, size = 100;
+int[] numbers = new int[size], sorted = new int[size];
 
-Console.WriteLine("Crie um vetor para ser ordenado: \n");
+Console.WriteLine("Crie um vetor para ser ordenado:");
 
 for (int i = 0; i < size; i++)
 {
@@ -24,8 +24,16 @@ for (int i = 0; i < size - 1; i++)
     }
 }
 
+Console.Write("\n\nVetor original:");
+for (int i = 0; i < size; i++)
+{
+    Console.Write(" " + numbers[i]);
+}
+
 Console.Write("\n\nVetor ordenado:");
 for (int i = 0; i < size; i++)
 {
     Console.Write(" " + sorted[i]);
 }
+
+Console.WriteLine();
