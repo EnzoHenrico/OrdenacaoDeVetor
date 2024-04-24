@@ -1,10 +1,10 @@
-﻿int aux = 0, tamanho = 10, tamanhoAtual = tamanho;
+﻿int aux = 0, tamanho = 100, tamanhoAtual = tamanho;
 int[] original = new int[tamanho], ordenado = new int[tamanho], invertido = new int[tamanho];
 
 Console.WriteLine("Crie um vetor para ser ordenado:");
 for (int i = 0; i < tamanho; i++)
 {
-    original[i] = new Random().Next(0,tamanho);
+    original[i] = new Random().Next(0,tamanho + 1);
     ordenado[i] = original[i];
 }
  
@@ -20,13 +20,12 @@ for (int i = 0; i < tamanhoAtual - 1; i++)
             {
                 // Troca a replica pelo último item do vetor
                 ordenado[j] = ordenado[tamanhoAtual - 1];
-                ordenado[tamanhoAtual - 1] = 0;
-                
+
                 // Salva o novo tamanho do vetor
                 tamanhoAtual--;
             }
         }
-        else if (ordenado[i] > ordenado[j])
+        if (ordenado[i] > ordenado[j])
         {
             aux = ordenado[i];
             ordenado[i] = ordenado[j];
