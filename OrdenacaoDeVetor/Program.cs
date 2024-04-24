@@ -1,4 +1,4 @@
-﻿int aux = 0, tamanho = 25, tamanhoAtual = tamanho;
+﻿int aux = 0, tamanho = 10, tamanhoAtual = tamanho;
 int[] original = new int[tamanho], ordenado = new int[tamanho], invertido = new int[tamanho];
 
 Console.WriteLine("Crie um vetor para ser ordenado:");
